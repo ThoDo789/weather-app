@@ -1,18 +1,9 @@
-import usePlacesAutocomplete, {
-    getGeocode,
-    getLatLng
-} from "use-places-autocomplete";
-//   import useOnclickOutside from "react-cool-onclickoutside";
+import usePlacesAutocomplete, { getGeocode,getLatLng} from "use-places-autocomplete";
+import "./weather.css"
   
   const PlacesAutocomplete = (props) => {
-      const{getLatLngLocation} = props;
-    const {
-      ready,
-      value,
-      suggestions: { status, data },
-      setValue,
-      clearSuggestions,
-    } = usePlacesAutocomplete({
+    const{getLatLngLocation} = props;
+    const { ready,value,suggestions: { status, data }, setValue, clearSuggestions,} = usePlacesAutocomplete({
       requestOptions: {
         /* Define search scope here */
       },
@@ -34,7 +25,7 @@ import usePlacesAutocomplete, {
       getGeocode({ address: description })
         .then((results) => getLatLng(results[0]))
         .then((latLng) => {
-          console.log("📍 Coordinates: ",latLng);
+          console.log("Coordinates: ",latLng);
           getLatLngLocation(latLng)
         })
         .catch((error) => {
@@ -44,28 +35,24 @@ import usePlacesAutocomplete, {
    
     const renderSuggestions = () =>
       data.map((suggestion) => {
-        const {
-          place_id,
-          structured_formatting: { main_text, secondary_text },
-        } = suggestion;
+        const { place_id, structured_formatting: { main_text, secondary_text } } = suggestion;
   
         return (
-          <li key={place_id} onClick={handleSelect(suggestion)}>
+          <li className="location__item" key={place_id} onClick={handleSelect(suggestion)}>
             <strong>{main_text}</strong> <small>{secondary_text}</small>
           </li>
         );
       });
   
     return (
-      <div >
-        <input
+      <div className="container" >
+        <input className="form-group"
           value={value}
           onChange={handleInput}
           disabled={!ready}
           placeholder="Where are you going?"
         />
-        {/* We can use the "status" to decide whether we should display the dropdown or not */}
-        {status === "OK" && <ul>{renderSuggestions()}</ul>}
+        {status === "OK" && <ul className="location__list">{renderSuggestions()}</ul>}
       </div>
     );
   };
