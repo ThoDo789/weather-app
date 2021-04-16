@@ -1,7 +1,7 @@
 .app{
   width: 100%;
   background-color: royalblue;
-  padding: 10vh ;
+  padding: 5vh ;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -10,8 +10,8 @@
 .app-weather{
    
   
-   padding: 10px;
-   background-color:#21862e ;
+   padding: 20px 10px;
+   
    box-shadow: rgba(50, 50, 93, 0.25)
      0px 50px 100px -20px,
       rgba(0, 0, 0, 0.3) 
@@ -19,6 +19,7 @@
       border-radius: 5px;
       width: 100%;
       max-width: 1200px;
+      backdrop-filter: blur(20px);
 
      
      
@@ -52,4 +53,8 @@ background-color: rgba(0, 0, 0, 0.35);
   
   display: flex;
   justify-content: center;
+  background-color: rgba(0,0,0,0.2);
+  padding:15px;
+  border-radius: 5px;
+
 }

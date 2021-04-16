@@ -84,7 +84,7 @@ const App = () => {
 
 
   return (
-    <div className="app">
+    <div className="app" style={{backgroundImage:`url(${bgImg})`}}>
       <div className="app-weather">
        
         <div className="container wrapper-col">
