@@ -1,0 +1,49 @@
+.bg-weather{
+    display: flex;
+    position: absolute;
+    bottom: 70px;
+    z-index: 1;
+    align-items: center;
+    color: white;
+    height: max-content;
+    padding: 12px 15px;
+    backdrop-filter: blur(43px);
+    border-radius: 4px;
+    text-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;;
+    box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
+}
+.bg__temp h1{
+    font-size: 80px;
+    padding: 0 10px;
+
+ }
+.bg__name-time{ 
+    margin: 0 10px;
+
+}
+.bg__name-time--name{
+    font-size: 40px;
+    margin-bottom: 10px;
+    
+ }
+.bg__name-time--time{
+
+ }
+.time{
+    font-size: 14px;
+    
+ }
+.status{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+ }
+.icon img {
+
+    height: 50px;
+    width: auto;
+ }
+.weather-name{
+
+ }

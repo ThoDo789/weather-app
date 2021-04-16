@@ -1,0 +1,17 @@
+.weather-show{
+    margin-top:50px;
+    color: #fff;
+ }
+h1.weather-show__title{ 
+   text-align: center;
+}
+.weather-show__content{ }
+.weather-show__details{
+    display: flex;
+    justify-content: space-between;
+    margin-top: 50px;
+    padding: 0 15px;
+    
+ }
+.weather-show__details-name{ }
+.weather-show__details-value{ }

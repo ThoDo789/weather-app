@@ -16,12 +16,12 @@ const{getCurrent} = props
   getCurrent(position)
   return (
     <div>
-      <p>
+      {/* <p>
         Latitude: {position.coords.latitude}
       </p>
       <p>
         Longitude: {position.coords.longitude}
-      </p>
+      </p> */}
 
     </div>
   );

@@ -1,21 +1,55 @@
 .app{
   width: 100%;
+  background-color: royalblue;
+  padding: 10vh ;
   display: flex;
   justify-content: center;
   align-items: center;
-  flex-direction: column;
-  /* width: max-content; */
-  padding-top: 10vh ;
+  height: 100vh;
 }
 .app-weather{
    
   
    padding: 10px;
    background-color:#21862e ;
-   width: max-content;
    box-shadow: rgba(50, 50, 93, 0.25)
      0px 50px 100px -20px,
       rgba(0, 0, 0, 0.3) 
       0px 30px 60px -30px;
       border-radius: 5px;
+      width: 100%;
+      max-width: 1200px;
+
+     
+     
+     
   }
+  .wrapper-col{
+  min-height: 60vh;
+  max-height: 500px;
+
+  }
+.bg{
+
+  border-radius: 5px;
+  overflow: hidden;
+  box-shadow: rgba(0, 0, 0, 0.35) 
+  0px 5px 15px;
+  display: flex;
+  justify-content: center;  
+  position: relative;
+}
+.bg::after{
+position: absolute;
+content: "";
+top:0;
+left:0;
+bottom:0;
+right:0;
+background-color: rgba(0, 0, 0, 0.35);
+}
+.details{
+  
+  display: flex;
+  justify-content: center;
+}

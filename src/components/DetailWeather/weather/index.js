@@ -2,7 +2,7 @@ import usePlacesAutocomplete, { getGeocode,getLatLng} from "use-places-autocompl
 import "./weather.css"
   
   const PlacesAutocomplete = (props) => {
-    const{getLatLngLocation} = props;
+    const{handleLatLng} = props;
     const { ready,value,suggestions: { status, data }, setValue, clearSuggestions,} = usePlacesAutocomplete({
       requestOptions: {
         /* Define search scope here */
@@ -14,7 +14,9 @@ import "./weather.css"
       // Update the keyword of the input element
       setValue(e.target.value);
     };
-  
+  const handleReset=()=>{
+    setValue('')
+  }
     const handleSelect = ({ description }) => () => {
       // When user selects a place, we can replace the keyword without request data from API
       // by setting the second parameter to "false"
@@ -26,7 +28,7 @@ import "./weather.css"
         .then((results) => getLatLng(results[0]))
         .then((latLng) => {
           console.log("Coordinates: ",latLng);
-          getLatLngLocation(latLng)
+          handleLatLng(latLng)
         })
         .catch((error) => {
           console.log("😱 Error: ", error);
@@ -45,7 +47,8 @@ import "./weather.css"
       });
   
     return (
-      <div className="container" >
+      <div className="container autocomplete" >
+        
         <input className="form-group"
           value={value}
           onChange={handleInput}
@@ -53,6 +56,7 @@ import "./weather.css"
           placeholder="Where are you going?"
         />
         {status === "OK" && <ul className="location__list">{renderSuggestions()}</ul>}
+        <button className="btn-reset" onClick={handleReset}>Reset</button>
       </div>
     );
   };
