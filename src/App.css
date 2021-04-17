@@ -6,6 +6,9 @@
   justify-content: center;
   align-items: center;
   height: 100vh;
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
 }
 .app-weather{
    
@@ -19,23 +22,21 @@
       border-radius: 5px;
       width: 100%;
       max-width: 1200px;
-      backdrop-filter: blur(20px);
-
+   
      
      
      
   }
   .wrapper-col{
-  min-height: 60vh;
-  max-height: 500px;
+  min-height: 25vh;
+
 
   }
 .bg{
 
   border-radius: 5px;
   overflow: hidden;
-  box-shadow: rgba(0, 0, 0, 0.35) 
-  0px 5px 15px;
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
   display: flex;
   justify-content: center;  
   position: relative;
@@ -47,14 +48,13 @@ top:0;
 left:0;
 bottom:0;
 right:0;
-background-color: rgba(0, 0, 0, 0.35);
+background-color: rgba(0, 0, 0, 0.15);
 }
 .details{
   
   display: flex;
   justify-content: center;
-  background-color: rgba(0,0,0,0.2);
-  padding:15px;
+ padding:0;
   border-radius: 5px;
-
+  height: 100%;
 }

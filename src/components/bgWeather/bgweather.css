@@ -8,12 +8,13 @@
     height: max-content;
     padding: 12px 15px;
     backdrop-filter: blur(43px);
+    background: rgba(0,0,0,.3);
     border-radius: 4px;
     text-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;;
     box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
 }
 .bg__temp h1{
-    font-size: 80px;
+    font-size: clamp(2rem, -0.875rem + 8.333vw, 80px);
     padding: 0 10px;
 
  }
@@ -22,7 +23,7 @@
 
 }
 .bg__name-time--name{
-    font-size: 40px;
+    font-size: clamp(2rem, -0.875rem + 8.333vw, 40px);
     margin-bottom: 10px;
     
  }
